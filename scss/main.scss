@@ -1,0 +1,21 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+// colors
+$blue: #61c4d9;
+$darkGreen: #0f5a47;
+$lightGrey: #666666;
+
+// normalize
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+
+// setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
+@import "base";
+
+// components
+@import "components/hero";
+@import "components/header";
+@import "components/features";
+@import "components/btn";
+@import "components/benefits";

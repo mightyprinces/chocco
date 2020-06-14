@@ -1,0 +1,271 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap");
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1, 5em;
+  color: #fff;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  max-width: 940px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 50px;
+}
+
+.headline {
+  max-width: 60%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.headline__title {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+}
+
+.section__title {
+  margin-bottom: 20px;
+}
+
+.headline__subtitle {
+  font-size: 18px;
+  color: #666666;
+}
+
+.hero {
+  background: url("../img/bg-leaf.png") right bottom no-repeat;
+  background-color: #61c4d9;
+  height: 100vh;
+  min-height: 650px;
+  color: #fff;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  background: url("../img/decor-berries.png");
+  position: absolute;
+  width: 460px;
+  height: 341px;
+  bottom: -40px;
+  right: 1%;
+}
+.hero::after {
+  content: "";
+  background: url("../img/decor-blurred-leaf.png");
+  position: absolute;
+  width: 59px;
+  height: 112px;
+  bottom: -40px;
+  left: 2%;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px 0 45px;
+  width: 940px;
+  margin: 0 auto;
+  background: url("../img/sweets.png") right 20% center/50% auto no-repeat;
+}
+
+.hero__main-title {
+  font-size: 48px;
+  line-height: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.hero__title-desc {
+  font-size: 21px;
+  margin-bottom: 32px;
+  padding-right: 10%;
+}
+
+.hero__title-section {
+  width: 46%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: 27px;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.phone-number {
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number__icon--elem {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.features {
+  display: flex;
+}
+
+.feature {
+  display: flex;
+}
+
+.features__item {
+  margin-right: 37px;
+}
+.features__item:last-child {
+  margin-right: 0;
+}
+
+.feature__icon {
+  width: 45px;
+  margin-right: 7px;
+}
+
+.feature__text {
+  font-size: 16px;
+  max-width: 85px;
+}
+
+.btn {
+  font-size: 19px;
+  font-weight: 800;
+  padding: 18px 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 50px;
+  display: inline-block;
+}
+.btn--theme--white {
+  background-color: white;
+  color: #0f5a47;
+}
+.btn--theme--white:hover {
+  background-color: #0f5a47;
+  color: white;
+}
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.benefits__item {
+  max-width: 30%;
+}
+
+.benefit__image {
+  margin-bottom: 30px;
+}
+
+.benefit__image-wrapper {
+  background: #f2f5f4;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.benefit__icon {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+}
+
+.benefit__title {
+  color: black;
+  margin-bottom: 30px;
+}
+
+.benefit__desc {
+  color: #666666;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=main.css.map */
