@@ -571,7 +571,7 @@ button {
 }
 .radio--checkbox .radio__visible:before {
   content: "";
-  background: url("/img/icons/checkmark.svg") center center no-repeat;
+  background: url("../img/icons/checkmark.svg") center center no-repeat;
 }
 
 .radio__elem {
