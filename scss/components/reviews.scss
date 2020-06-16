@@ -28,7 +28,6 @@
   overflow: hidden;
   position: relative;
   margin-bottom: 26px;
-  background: url("/img/sketch-berries.png") top right;
 
   &::before {
     content: "";
@@ -41,6 +40,11 @@
     top: -65px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    background: url("../img/sketch-berries.png") top right;
   }
 }
 
