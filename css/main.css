@@ -369,7 +369,6 @@ button {
   overflow: hidden;
   position: relative;
   margin-bottom: 26px;
-  background: url("/img/sketch-berries.png") top right;
 }
 .reviews__display::before {
   content: "";
@@ -382,6 +381,15 @@ button {
   top: -65px;
   left: 50%;
   transform: translateX(-50%);
+}
+.reviews__display::after {
+  content: "";
+  position: absolute;
+  background: url(../img/sketch-berries.png);
+  width: 127px;
+  height: 167px;
+  top: 0;
+  right: 0;
 }
 
 .reviews__display-inner {
