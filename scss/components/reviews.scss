@@ -1,0 +1,94 @@
+.reviews-section {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url('../img/strawberry.png') no-repeat;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    width: 150px;
+    height: 86px;
+  }
+
+  &::after {
+    content: "";
+    background: url('../img/berries-leaf.png') no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -96px;
+    width: 139px;
+    height: 321px;
+  }
+}
+
+.reviews__display {
+  background: #f8faf9;
+  padding: 50px 45px 34px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 26px;
+  background: url("/img/sketch-berries.png") top right;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.reviews__display-inner {
+  display: flex;
+}
+
+.reviews__avatar {
+  width: 254px;
+  height: 260px;
+}
+
+.reviews__avatar-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  flex: 1;
+  margin: 12px 100px 12px 20px;
+}
+
+.reviews__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 23px;
+}
+
+.reviews__text {
+  margin-bottom: 36px;
+  line-height: 1.2em;
+}
+
+.reviews__author {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+// Switcher
+
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__switcher-item + .reviews__switcher-item {
+  margin-left: 5px;
+}

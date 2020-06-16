@@ -12,7 +12,30 @@
 }
 
 .benefits__item {
-  max-width: 30%;
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+
+  &:before {
+    content: url("/img/decor-circles.png");
+    position: absolute;
+    top: 52px;
+    right: 0;
+    transform: translateX(50%);
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
 }
 
 .benefit__image {
@@ -21,26 +44,40 @@
 
 .benefit__image-wrapper {
   background: #f2f5f4;
-  width: 125px;
-  height: 125px;
+  width: 126px;
+  height: 126px;
   border-radius: 50%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit__icon {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
+  width: 68px;
 }
 
 .benefit__title {
+  font-size: 27px;
   color: black;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .benefit__desc {
   color: $lightGrey;
   font-weight: 300;
+}
+
+.benefits-section {
+  position: relative;
+  background: url('../img/benefit-leaf.png') left top 40% no-repeat;
+
+  &::before {
+    content: "";
+    background: url('../img/benefit-berries-bar.png');
+    position: absolute;
+    left: 0;
+    bottom: -108px;
+    width: 161px;
+    height: 315px;
+  }
 }

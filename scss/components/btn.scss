@@ -7,6 +7,10 @@
   line-height: 1;
   border-radius: 50px;
   display: inline-block;
+  border: none;
+  outline: none;
+  transition: .3s;
+  cursor: pointer;
 
   &--theme--white {
     background-color: white;
@@ -18,5 +22,25 @@
     }
   }
 
+  &--theme--green {
+    background-color: $darkGreen;
+    color: white;
 
+    &:hover {
+      background-color: #0b4d3c;
+      color: white;
+    }
+  }
+
+  &--theme-transparent {
+    background-color: transparent;
+    color: $darkGreen;
+    font-weight: normal;
+    text-transform: none;
+
+
+    &:hover {
+      color: black;
+    }
+  }
 }

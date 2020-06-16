@@ -8,7 +8,7 @@ body {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 18px;
   line-height: 1, 5em;
-  color: #fff;
+  color: #666666;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,33 +52,54 @@ button {
   outline: none;
 }
 
-.container {
-  max-width: 940px;
-  width: 95%;
-  margin: 0 auto;
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden;
 }
 
-.section .container {
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0 50px;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section--font-color--green {
+  color: #0f5a47;
+}
+.section--font-color--green .section__title {
+  color: #0f5a47;
 }
 
 .headline {
   max-width: 60%;
   text-align: center;
+  margin-bottom: 56px;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
   margin-bottom: 50px;
 }
 
 .headline__title {
-  font-size: 48px;
-  font-weight: bold;
-  color: black;
-}
-
-.section__title {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .headline__subtitle {
@@ -211,6 +232,10 @@ button {
   line-height: 1;
   border-radius: 50px;
   display: inline-block;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .btn--theme--white {
   background-color: white;
@@ -219,6 +244,23 @@ button {
 .btn--theme--white:hover {
   background-color: #0f5a47;
   color: white;
+}
+.btn--theme--green {
+  background-color: #0f5a47;
+  color: white;
+}
+.btn--theme--green:hover {
+  background-color: #0b4d3c;
+  color: white;
+}
+.btn--theme-transparent {
+  background-color: transparent;
+  color: #0f5a47;
+  font-weight: normal;
+  text-transform: none;
+}
+.btn--theme-transparent:hover {
+  color: black;
 }
 
 .benefits {
@@ -235,7 +277,25 @@ button {
 }
 
 .benefits__item {
-  max-width: 30%;
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+.benefits__item:before {
+  content: url("/img/decor-circles.png");
+  position: absolute;
+  top: 52px;
+  right: 0;
+  transform: translateX(50%);
+}
+.benefits__item:first-child {
+  padding-left: 0;
+}
+.benefits__item:last-child {
+  padding-right: 0;
+}
+.benefits__item:last-child::before {
+  display: none;
 }
 
 .benefit__image {
@@ -244,28 +304,334 @@ button {
 
 .benefit__image-wrapper {
   background: #f2f5f4;
-  width: 125px;
-  height: 125px;
+  width: 126px;
+  height: 126px;
   border-radius: 50%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit__icon {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
+  width: 68px;
 }
 
 .benefit__title {
+  font-size: 27px;
   color: black;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .benefit__desc {
   color: #666666;
   font-weight: 300;
+}
+
+.benefits-section {
+  position: relative;
+  background: url("../img/benefit-leaf.png") left top 40% no-repeat;
+}
+.benefits-section::before {
+  content: "";
+  background: url("../img/benefit-berries-bar.png");
+  position: absolute;
+  left: 0;
+  bottom: -108px;
+  width: 161px;
+  height: 315px;
+}
+
+.reviews-section {
+  position: relative;
+}
+.reviews-section::before {
+  content: "";
+  background: url("../img/strawberry.png") no-repeat;
+  position: absolute;
+  right: 1%;
+  top: 0;
+  width: 150px;
+  height: 86px;
+}
+.reviews-section::after {
+  content: "";
+  background: url("../img/berries-leaf.png") no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: -96px;
+  width: 139px;
+  height: 321px;
+}
+
+.reviews__display {
+  background: #f8faf9;
+  padding: 50px 45px 34px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 26px;
+  background: url("/img/sketch-berries.png") top right;
+}
+.reviews__display::before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reviews__display-inner {
+  display: flex;
+}
+
+.reviews__avatar {
+  width: 254px;
+  height: 260px;
+}
+
+.reviews__avatar-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  flex: 1;
+  margin: 12px 100px 12px 20px;
+}
+
+.reviews__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 23px;
+}
+
+.reviews__text {
+  margin-bottom: 36px;
+  line-height: 1.2em;
+}
+
+.reviews__author {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__switcher-item + .reviews__switcher-item {
+  margin-left: 5px;
+}
+
+.interactive-avatar {
+  width: 80px;
+  height: 80px;
+  border: 6px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+}
+.interactive-avatar:hover {
+  border: 6px solid #cfdeda;
+  background: #cfdeda;
+}
+.interactive-avatar--active {
+  border: 6px solid #0f5a47;
+  background: #0f5a47;
+}
+
+.interactive-avatar__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.interactive-avatar__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+}
+
+.form__col {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form__col:last-child {
+  margin-right: 0;
+}
+
+.order-section {
+  background: #cfdeda;
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+}
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__input {
+  width: 100%;
+  border: 3px solid transparent;
+  padding: 18px 11px;
+}
+.form__input--textarea {
+  height: 180px;
+  resize: none;
+}
+
+.form__input:focus {
+  border: 3px solid #dee2bd;
+  outline: none;
+}
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-bottom: -14px;
+}
+
+.radio__container {
+  margin: 0 20px 10px 0;
+}
+
+.form__title {
+  margin-bottom: 4px;
+}
+
+.form__btns {
+  margin-top: 28px;
+}
+
+.order-section {
+  background: url(../img/green-pattern.jpg) center center;
+  object-fit: cover;
+  position: relative;
+}
+.order-section::before {
+  content: "";
+  background: url("../img/blackberry.png");
+  position: absolute;
+  width: 242px;
+  height: 264px;
+  top: -100px;
+  right: -70px;
+}
+.order-section::after {
+  content: "";
+  background: url("../img/blueberry-and-leaf.png");
+  position: absolute;
+  width: 1077px;
+  height: 188px;
+  bottom: 10%;
+}
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+.radio--checkbox .radio__visible {
+  border-radius: 0;
+}
+.radio--checkbox .radio__visible:before {
+  content: "";
+  background: url("/img/icons/checkmark.svg") center center no-repeat;
+}
+
+.radio__elem {
+  display: none;
+}
+.radio__elem:checked ~ .radio__visible::before {
+  display: block;
+}
+
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 50%;
+  background: white;
+}
+.radio__visible:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0f5a47;
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio__title {
+  line-height: 26px;
+  margin-left: 10px;
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+.fixed-menu__link::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+.fixed-menu__item--active .fixed-menu__link {
+  border-color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
