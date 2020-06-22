@@ -2,52 +2,43 @@
   position: relative;
 
   &::before {
-    content: "";
-    background: url('../img/strawberry.png') no-repeat;
+    content: url('../img/strawberry.png');
     position: absolute;
     right: 1%;
     top: 0;
-    width: 150px;
-    height: 86px;
   }
 
   &::after {
-    content: "";
-    background: url('../img/berries-leaf.png') no-repeat;
+    content: url('../img/berries-leaf.png');
     position: absolute;
     left: 0;
-    bottom: -96px;
-    width: 139px;
-    height: 321px;
+    bottom: rem(-96px);
   }
 }
 
 .reviews__display {
   background: #f8faf9;
-  padding: 50px 45px 34px;
+  padding: rem(50px) rem(45px) rem(34px);
   overflow: hidden;
   position: relative;
-  margin-bottom: 26px;
+  margin-bottom: rem(26px);
 
   &::before {
     content: "";
     display: block;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     background: #fff;
     border-radius: 50%;
     position: absolute;
-    top: -65px;
+    top: rem(-65px);
     left: 50%;
     transform: translateX(-50%);
   }
 
   &::after {
-    content: "";
+    content: url(../img/sketch-berries.png);
     position: absolute;
-    background: url(../img/sketch-berries.png);
-    width: 127px;
-    height: 167px;
     top: 0;
     right: 0;
   }
@@ -55,11 +46,22 @@
 
 .reviews__display-inner {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .reviews__avatar {
-  width: 254px;
-  height: 260px;
+  width: rem(254px);
+  height: rem(260px);
+
+  @include tablets {
+    width: rem(130px);
+    height: rem(132px);
+  }
 }
 
 .reviews__avatar-image {
@@ -70,24 +72,36 @@
 
 .reviews__content {
   flex: 1;
-  padding: 12px 100px 12px 20px;
+  padding: rem(12px) rem(100px) rem(12px) rem(20px);
+  
+  @include tablets {
+    padding: rem(30px) rem(20px);
+  }
 }
 
 .reviews__title {
-  font-size: 30px;
+  font-size: rem(30px);
   font-weight: bold;
   color: black;
-  margin-bottom: 23px;
+  margin-bottom: rem(23px);
+
+  @include tablets {
+    margin-bottom: rem(18px);
+  }
 }
 
 .reviews__text {
-  margin-bottom: 36px;
+  margin-bottom: rem(36px);
   line-height: 1.2em;
+
+  @include tablets {
+    margin-bottom: rem(26px);
+  }
 }
 
 .reviews__author {
   color: black;
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: 500;
 }
 
@@ -99,5 +113,5 @@
 }
 
 .reviews__switcher-item + .reviews__switcher-item {
-  margin-left: 5px;
+  margin-left: rem(5px);
 }

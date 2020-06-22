@@ -1,19 +1,19 @@
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
-  border: 6px solid transparent;
+  width: rem(80px);
+  height: rem(80px);
+  border: rem(6px) solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
   transition: .3s;
   
   &:hover {
-    border: 6px solid #cfdeda;
+    border: rem(6px) solid #cfdeda;
     background: #cfdeda;
   }
 
   &--active {
-    border: 6px solid $darkGreen;
+    border: rem(6px) solid $darkGreen;
     background: $darkGreen;
   }
 }

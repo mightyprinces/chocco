@@ -2,17 +2,24 @@
   background: url('../img/bg-leaf.png') right bottom no-repeat;
   background-color: $blue;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   color: #fff;
   position: relative;
+
+  
+  &::before, &::after {
+    @include tablets {
+      display: none;
+    }
+  }
 
   &::before {
     content: "";
     background: url('../img/decor-berries.png');
     position: absolute;
-    width: 460px;
-    height: 341px;
-    bottom: -40px;
+    width: rem(460px);
+    height: rem(341px);
+    bottom: rem(-40px);
     right: 1%;
   }
 
@@ -20,38 +27,88 @@
     content: "";
     background: url('../img/decor-blurred-leaf.png');
     position: absolute;
-    width: 59px;
-    height: 112px;
-    bottom: -40px;
+    width: rem(59px);
+    height: rem(112px);
+    bottom: rem(-40px);
     left: 2%;
+  }
+
+  @include tablets {
+    background-position: right bottom 88%;
+    min-height: 720px;
   }
 }
 
 .hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100%;
-  padding: 24px 0 45px;
-  width: $containerWidth;
-  margin: 0 auto;
+  justify-content: space-between;
   background: url('../img/sweets.png') right 20% center / 50% auto no-repeat;
+  align-items: flex-start;
+
+  @include tablets {
+    background: none;
+  }
 }
 
 .hero__main-title {
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: 1.2em;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
   text-transform: uppercase;
+
+  @include phones {
+    font-size: rem(40px);
+    line-height: 1.1em;
+  }
 }
 
 .hero__title-desc {
-  font-size: 21px;
-  margin-bottom: 32px;
+  font-size: rem(21px);
+  margin-bottom: rem(32px);
   padding-right: 10%;
+  
+  @include tablets {
+    text-align: center;
+    padding: 0 24%;
+  }
+
+  @include phones {
+    padding: 0 15%;
+  }
+
 }
 
 .hero__title-section {
   width: 46%;
+  margin-bottom: 30px;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      width: rem(368px);
+      height: rem(366px);
+      background: url('../img/bars-and-berries.png') center center / contain no-repeat;
+      margin-bottom: 16px;
+
+      @include phones {
+        width: rem(341px);
+        height: rem(344px);
+      }
+    }
+  }
+}
+
+.hero__icons-section {
+  @include tablets {
+    display: none;
+  }
 }

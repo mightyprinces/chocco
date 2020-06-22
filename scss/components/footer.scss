@@ -1,0 +1,108 @@
+.phone-number--theme--green {
+  color: $darkGreen;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: rem(23px) 0;
+  background: #fff;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.contacts {
+  font-style: normal;
+  font-size: rem(20px);
+  color: #010101;
+
+  @include phones {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// SOCIALS
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-right: 20px;
+}
+
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__link {
+  display: block;
+  width: 23px;
+  height: 20px;
+  position: relative;
+  // opacity: .5;
+}
+
+.socials__link:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.socials__item--icon--vk .socials__link:after {
+  background: url('../img/icons/socials/vk.svg') center center / cover no-repeat;
+}
+
+.socials__item--icon--facebook .socials__link:after {
+  background: url('../img/icons/socials/facebook.svg') center center no-repeat;
+}
+
+.socials__item--icon--instagram .socials__link:after {
+  background: url('../img/icons/socials/instagram.svg') center center no-repeat;
+}
+
+.socials__item--icon--twitter .socials__link:after {
+  background: url('../img/icons/socials/twitter.svg') center center no-repeat;
+}
+
+.socials__link:hover {
+  opacity: 1;
+  transition: .3s;
+}
+
+/* .socials__item--icon--telegram .socials__link {
+  background-image: url("../../images/icons/socials/telegram.png");
+}
+
+.socials__item--icon--vk .socials__link {
+  background-image: url("../../images/icons/socials/vkontakte.png");
+}
+
+.socials__item--icon--facebook .socials__link {
+  background-image: url("../../images/icons/socials/facebook.png");
+}
+
+.socials__item--icon--instagram .socials__link {
+  background-image: url("../../images/icons/socials/instagram.png");
+} */
