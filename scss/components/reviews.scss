@@ -2,10 +2,20 @@
   position: relative;
 
   &::before {
-    content: url('../img/strawberry.png');
+    content: "";
+    background: url('../img/strawberry.png') center center / cover no-repeat;
     position: absolute;
-    right: 1%;
+    width: rem(150px);
+    height: rem(86px);
     top: 0;
+    right: rem(-20px);
+
+    // @include phones {
+    //   top: rem(-15px);
+    //   right: rem(-15px);
+    //   // width: 90px;
+    //   // height: 60px;
+    // }
   }
 
   &::after {
