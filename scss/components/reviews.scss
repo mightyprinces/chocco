@@ -10,19 +10,25 @@
     top: 0;
     right: rem(-20px);
 
-    // @include phones {
-    //   top: rem(-15px);
-    //   right: rem(-15px);
-    //   // width: 90px;
-    //   // height: 60px;
-    // }
+    @include phones {
+      top: rem(-20px);
+    }
   }
 
   &::after {
-    content: url('../img/berries-leaf.png');
+    content: "";
+    background: url('../img/berries-leaf.png')center center / cover no-repeat;
     position: absolute;
+    width: rem(139px);
+    height: rem(321px);
     left: 0;
-    bottom: rem(-96px);
+    bottom: rem(-110px);
+
+    @include phones {
+      bottom: rem(-140px);
+      // width: rem(139px * 0.7);
+      // height: rem(321px * 0.7);
+    }
   }
 }
 
@@ -102,7 +108,7 @@
 
 .reviews__text {
   margin-bottom: rem(36px);
-  line-height: 1.2em;
+  line-height: 1.2;
 
   @include tablets {
     margin-bottom: rem(26px);

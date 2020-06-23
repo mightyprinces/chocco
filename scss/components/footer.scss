@@ -53,9 +53,15 @@
 
 .socials__link {
   display: block;
-  width: 23px;
+  width: 24px;
   height: 20px;
   position: relative;
+  fill: #b2b2b2;
+  transition: .3s;
+
+  &:hover {
+    fill: #000;
+  }
   // opacity: .5;
 }
 

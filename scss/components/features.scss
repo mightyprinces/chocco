@@ -16,7 +16,11 @@
 
 .feature__icon {
   width: rem(45px);
+  height: rem(45px);
   margin-right: rem(7px);
+  fill: #b0f7ff;
+  stroke-width: rem(0.2px);
+  stroke: #b0f7ff;
 }
 
 .feature__text {

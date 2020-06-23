@@ -20,7 +20,7 @@ body, html {
 
 body {
   font-family: "Alegreya Sans", sans-serif;
-  line-height: 1, 5em;
+  line-height: 1, 5;
   color: #666666;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -161,7 +161,7 @@ button {
   position: absolute;
   width: 3.2777777778rem;
   height: 6.2222222222rem;
-  bottom: -2.2222222222rem;
+  bottom: -3.0555555556rem;
   left: 2%;
 }
 @media screen and (max-width: 768px) {
@@ -185,7 +185,7 @@ button {
 
 .hero__main-title {
   font-size: 2.6666666667rem;
-  line-height: 1.2em;
+  line-height: 1.2;
   font-weight: bold;
   margin-bottom: 0.4444444444rem;
   text-transform: uppercase;
@@ -193,7 +193,7 @@ button {
 @media screen and (max-width: 480px) {
   .hero__main-title {
     font-size: 2.2222222222rem;
-    line-height: 1.1em;
+    line-height: 1.1;
   }
 }
 
@@ -304,6 +304,7 @@ button {
   height: 0.6666666667rem;
   width: 0.6666666667rem;
   margin-right: 0.3333333333rem;
+  fill: #fff;
 }
 
 .phone-number__text {
@@ -338,7 +339,11 @@ button {
 
 .feature__icon {
   width: 2.5rem;
+  height: 2.5rem;
   margin-right: 0.3888888889rem;
+  fill: #b0f7ff;
+  stroke-width: 0.0111111111rem;
+  stroke: #b0f7ff;
 }
 
 .feature__text {
@@ -353,7 +358,7 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1;
-  border-radius: 2.7777777778rem;
+  border-radius: 50px;
   display: inline-block;
   border: none;
   outline: none;
@@ -464,6 +469,7 @@ button {
 
 .benefit__icon {
   width: 3.7777777778rem;
+  fill: #2a2a29;
 }
 
 @media screen and (max-width: 480px) {
@@ -521,11 +527,24 @@ button {
   top: 0;
   right: -1.1111111111rem;
 }
+@media screen and (max-width: 480px) {
+  .reviews-section::before {
+    top: -1.1111111111rem;
+  }
+}
 .reviews-section::after {
-  content: url("../img/berries-leaf.png");
+  content: "";
+  background: url("../img/berries-leaf.png") center center/cover no-repeat;
   position: absolute;
+  width: 7.7222222222rem;
+  height: 17.8333333333rem;
   left: 0;
-  bottom: -5.3333333333rem;
+  bottom: -6.1111111111rem;
+}
+@media screen and (max-width: 480px) {
+  .reviews-section::after {
+    bottom: -7.7777777778rem;
+  }
 }
 
 .reviews__display {
@@ -606,7 +625,7 @@ button {
 
 .reviews__text {
   margin-bottom: 2rem;
-  line-height: 1.2em;
+  line-height: 1.2;
 }
 @media screen and (max-width: 768px) {
   .reviews__text {
@@ -842,10 +861,10 @@ button {
 }
 
 .fixed-menu__link {
-  width: 0.8888888889rem;
-  height: 0.8888888889rem;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 0.0555555556rem solid transparent;
+  border: 1px solid transparent;
   display: block;
   position: relative;
   transition: 0.3s;
@@ -853,8 +872,8 @@ button {
 .fixed-menu__link::before {
   content: "";
   display: block;
-  width: 0.3333333333rem;
-  height: 0.3333333333rem;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #fff;
   position: absolute;
@@ -867,7 +886,7 @@ button {
 }
 
 .fixed-menu__item {
-  margin-bottom: 0.2777777778rem;
+  margin-bottom: 5px;
 }
 .fixed-menu__item--active .fixed-menu__link {
   border-color: white;
@@ -954,9 +973,14 @@ button {
 
 .socials__link {
   display: block;
-  width: 23px;
+  width: 24px;
   height: 20px;
   position: relative;
+  fill: #b2b2b2;
+  transition: 0.3s;
+}
+.socials__link:hover {
+  fill: #000;
 }
 
 .socials__link:after {
