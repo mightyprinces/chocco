@@ -1025,6 +1025,10 @@ button {
   transition: 0.3s;
 }
 
+.theme--svg--green {
+  fill: #0f5a47;
+}
+
 /* .socials__item--icon--telegram .socials__link {
   background-image: url("../../images/icons/socials/telegram.png");
 }
