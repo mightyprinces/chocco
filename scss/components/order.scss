@@ -113,10 +113,11 @@
     width: rem(242px);
     height: rem(264px);
 
-    // @include phones {
-    //   width: rem(242px);
-    //   height: rem(264px);
-    // }
+    @include phones {
+      width: rem(242px * 0.9);
+      height: rem(264px * 0.9);
+      right: rem(-60px);
+    }
   }
 
   &::after {
