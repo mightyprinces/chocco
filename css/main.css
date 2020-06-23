@@ -256,6 +256,12 @@ button {
   width: 100%;
 }
 
+.logo {
+  width: 3.0555555556rem;
+  height: 2.2777777778rem;
+  fill: #fff;
+}
+
 .menu {
   margin: 0 1.1111111111rem;
   padding-top: 5px;
