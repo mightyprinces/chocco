@@ -923,7 +923,7 @@ button {
 }
 
 #map {
-  background: url("../img/map.png") center top no-repeat;
+  background: url("../img/map.png") center top/cover no-repeat;
   height: 100%;
   width: 100%;
 }
