@@ -791,10 +791,13 @@ button {
   position: relative;
 }
 .order-section::before {
-  content: url("../img/blackberry.png");
+  content: "";
+  background: url("../img/blackberry.png") center center/cover no-repeat;
   position: absolute;
   top: -5.5555555556rem;
   right: -3.8888888889rem;
+  width: 13.4444444444rem;
+  height: 14.6666666667rem;
 }
 .order-section::after {
   content: url("../img/blueberry-and-leaf.png");

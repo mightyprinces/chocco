@@ -105,10 +105,18 @@
   position: relative;
 
   &::before {
-    content: url('../img/blackberry.png');
+    content: "";
+    background: url('../img/blackberry.png') center center / cover no-repeat;
     position: absolute;
     top: rem(-100px);
     right: rem(-70px);
+    width: rem(242px);
+    height: rem(264px);
+
+    // @include phones {
+    //   width: rem(242px);
+    //   height: rem(264px);
+    // }
   }
 
   &::after {
