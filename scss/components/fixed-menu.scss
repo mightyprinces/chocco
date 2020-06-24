@@ -1,7 +1,7 @@
 .fixed-menu {
   position: fixed;
   top: 50%;
-  right: 3%;
+  right: 1%;
   transform: translateY(-50%);
   z-index: $z-fixed-menu;
 
@@ -30,6 +30,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1px #abcacc80;
   }
 
   &:hover {
@@ -43,6 +44,7 @@
   &--active {
     .fixed-menu__link {
       border-color: white;
+      box-shadow: 0 0 0 1px #abcacc80;
     }
   } 
 }

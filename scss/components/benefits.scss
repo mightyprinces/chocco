@@ -72,11 +72,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background:#f2f5f4;
+    width: rem(126px);
+    height: rem(126px);
+    border-radius: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  &:hover {
+    &:after {
+      width: rem(166px);
+      height: rem(166px);
+      opacity: 0;
+    }
+
+    .benefit__icon {
+      fill: #3690a3;
+      filter: drop-shadow(0px 6px 2px #3690a330);
+    }
+  }
 }
 
 .benefit__icon {
   width: rem(68px);
   fill: #2a2a29;
+  transition: .5s;
+  filter: drop-shadow(0px 0px 0px #2a2a2950);
 }
 
 .benefit__text {

@@ -10,6 +10,8 @@
       &:before {
         content: "";
         background: url("../img/icons/checkmark.svg") center center no-repeat;
+        width: rem(12px);
+        height: rem(12px);
       }
     }
   }

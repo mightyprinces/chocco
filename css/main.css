@@ -73,7 +73,7 @@ button {
 }
 
 .container {
-  width: 95%;
+  width: 92%;
   max-width: 940px;
   margin: 0 auto;
   padding: 1.3333333333rem 0 2.5rem;
@@ -471,11 +471,33 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.benefit__image-wrapper:after {
+  content: "";
+  position: absolute;
+  background: #f2f5f4;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 1s;
+}
+.benefit__image-wrapper:hover:after {
+  width: 9.2222222222rem;
+  height: 9.2222222222rem;
+  opacity: 0;
+}
+.benefit__image-wrapper:hover .benefit__icon {
+  fill: #3690a3;
+  filter: drop-shadow(0px 6px 2px #3690a330);
 }
 
 .benefit__icon {
   width: 3.7777777778rem;
   fill: #2a2a29;
+  transition: 0.5s;
+  filter: drop-shadow(0px 0px 0px #2a2a2950);
 }
 
 @media screen and (max-width: 480px) {
@@ -829,6 +851,8 @@ button {
 .radio--checkbox .radio__visible:before {
   content: "";
   background: url("../img/icons/checkmark.svg") center center no-repeat;
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
 }
 
 .radio__elem {
@@ -866,7 +890,7 @@ button {
 .fixed-menu {
   position: fixed;
   top: 50%;
-  right: 3%;
+  right: 1%;
   transform: translateY(-50%);
   z-index: 100;
 }
@@ -896,6 +920,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px #abcacc80;
 }
 .fixed-menu__link:hover {
   border-color: #ffffff50;
@@ -906,6 +931,7 @@ button {
 }
 .fixed-menu__item--active .fixed-menu__link {
   border-color: white;
+  box-shadow: 0 0 0 1px #abcacc80;
 }
 
 .hamburger {
@@ -1034,21 +1060,5 @@ button {
 .theme--svg--green {
   fill: #0f5a47;
 }
-
-/* .socials__item--icon--telegram .socials__link {
-  background-image: url("../../images/icons/socials/telegram.png");
-}
-
-.socials__item--icon--vk .socials__link {
-  background-image: url("../../images/icons/socials/vkontakte.png");
-}
-
-.socials__item--icon--facebook .socials__link {
-  background-image: url("../../images/icons/socials/facebook.png");
-}
-
-.socials__item--icon--instagram .socials__link {
-  background-image: url("../../images/icons/socials/instagram.png");
-} */
 
 /*# sourceMappingURL=main.css.map */
