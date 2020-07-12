@@ -73,14 +73,13 @@ button {
 }
 
 .container {
-  width: 92%;
   max-width: 940px;
-  margin: 0 auto;
-  padding: 1.3333333333rem 0 2.5rem;
+  padding: 1.3333333333rem 2% 2.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -262,6 +261,22 @@ button {
   fill: #fff;
 }
 
+.close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .close {
+    display: block;
+    width: 1.3333333333rem;
+    height: 1.3333333333rem;
+    position: absolute;
+    right: 4%;
+    top: 1.3333333333rem;
+    fill: #fff;
+    cursor: pointer;
+  }
+}
+
 .menu {
   margin: 0 1.1111111111rem;
   padding-top: 5px;
@@ -269,7 +284,33 @@ button {
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47, 50, 52, 0.99);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    margin: 0;
+    padding-top: 0;
+    opacity: 0;
+    transition: 1s;
   }
+}
+
+.body--with_opened_menu .hero {
+  z-index: 100;
+}
+
+.body--with_opened_menu .menu {
+  display: flex;
+  opacity: 1;
+}
+
+.body--with_opened_menu .fixed-menu {
+  display: none;
 }
 
 .menu__list {
@@ -278,12 +319,17 @@ button {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .menu__list {
+    flex-direction: column;
+  }
+}
 
 .menu__item {
   margin-right: 1.5rem;
   border-bottom: 0.0555555556rem solid transparent;
   transition: 0.3s;
-  margin-bottom: 10px;
+  margin-bottom: 0.5555555556rem;
 }
 .menu__item:last-child {
   margin-right: 0;
@@ -293,6 +339,15 @@ button {
 }
 .menu__item--active {
   border-bottom: 0.0555555556rem solid #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .menu__item {
+    margin-right: 0;
+    margin-bottom: 1.6666666667rem;
+  }
+  .menu__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .phone-number {
@@ -320,6 +375,11 @@ button {
 .menu__link {
   text-decoration: none;
   white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .menu__link {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1073,6 +1133,7 @@ button {
 .slider__item {
   display: flex;
   align-items: center;
+  margin: 0 1.1111111111rem;
 }
 @media screen and (max-width: 768px) {
   .slider__item {
@@ -1082,7 +1143,7 @@ button {
 
 .slider__image {
   flex: 1;
-  margin-right: 65px;
+  margin-right: 3%;
 }
 @media screen and (max-width: 768px) {
   .slider__image {
@@ -1091,6 +1152,9 @@ button {
   }
 }
 
+.slider__image-elem {
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .slider__image-elem {
     width: 23.3333333333rem;
@@ -1099,12 +1163,6 @@ button {
 
 .slider__content {
   flex: 1;
-  padding-right: 1.6666666667rem;
-}
-@media screen and (max-width: 768px) {
-  .slider__content {
-    padding-right: 0;
-  }
 }
 
 .info-btn {
@@ -1117,6 +1175,15 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.info-btn:hover {
+  background: #00accf;
+}
+.info-btn:hover .tooltip {
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .info-btn {
@@ -1261,6 +1328,48 @@ button {
 .slider__arrow {
   width: 0.8888888889rem;
   height: 1.6666666667rem;
+}
+
+.tooltip {
+  display: none;
+  background: #fffffff5;
+  padding: 27px 30px;
+  border-radius: 5px;
+  width: 260px;
+}
+
+.info-btn__tooltip {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.tooltip__item {
+  display: flex;
+  min-height: 35px;
+  color: #000;
+}
+.tooltip__item + .tooltip__item {
+  margin-top: 20px;
+}
+
+.tooltip__img {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.tooltip__weight {
+  margin-left: 20px;
+  white-space: nowrap;
+  padding: 8px 0;
+}
+
+.tooltip__text {
+  flex-grow: 1;
+  padding: 8px 0;
+  line-height: 21px;
 }
 
 /*# sourceMappingURL=main.css.map */

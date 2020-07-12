@@ -26,6 +26,9 @@
                 <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
               </ul>
+              <svg class="close">
+                <use xlink:href="./img/icons/sprite.svg#close"></use>
+              </svg>
             </nav>
             <a href="tel:+8009039090" class="phone-number header__phone-number">
               <span class="phone-number__icon">
@@ -161,9 +164,61 @@
                     <use xlink:href="./img/icons/sprite.svg#chocolate-bar"></use>
                   </svg>
                   <div class="info-btn__text">Состав</div>
+                  <ul class="info-btn__tooltip tooltip">
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#oat"></use>
+                        </svg>
+                        <div class="tooltip__text">Овес</div>
+                        <div class="tooltip__weight">25 г</div>
+                      </li>
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#seaweed"></use>
+                        </svg>
+                        <div class="tooltip__text">Мор. водоросли морские водоросли</div>
+                        <div class="tooltip__weight">15 г</div>
+                      </li>
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#almond"></use>
+                        </svg>
+                        <div class="tooltip__text">Миндаль</div>
+                        <div class="tooltip__weight">20 г</div>
+                      </li>
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#powder"></use>
+                        </svg>
+                        <div class="tooltip__text">Сухое молоко</div>
+                        <div class="tooltip__weight">10 г</div>
+                      </li>
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#seeds"></use>
+                        </svg>
+                        <div class="tooltip__text">Тыкв. семечки</div>
+                        <div class="tooltip__weight">20 г</div>
+                      </li>
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#apitherapy"></use>
+                        </svg>
+                        <div class="tooltip__text">Зам. сахара</div>
+                        <div class="tooltip__weight">4 г</div>
+                      </li>
+                      <li class="tooltip__item">
+                        <svg class="tooltip__img">
+                          <use xlink:href="./img/icons/sprite.svg#beans"></use>
+                        </svg>
+                        <div class="tooltip__text">Какао бобы</div>
+                        <div class="tooltip__weight">4 г</div>
+                      </li>
+                  </ul>
                 </div>
+
                 <h2 class="slider__title">
-                  Батончик “Морские&nbspводоросли”
+                  Батончик “Морские водоросли”
                 </h2>
                 <div class="slider__text">
                   Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
@@ -387,6 +442,7 @@
     </ul>
   </nav>
 
+  <script src="./script.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 </html>

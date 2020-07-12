@@ -10,6 +10,7 @@
 .slider__item {
   display: flex;
   align-items: center;
+  margin: 0 rem(20px);
 
   @include tablets {
     flex-direction: column;
@@ -18,7 +19,7 @@
 
 .slider__image {
   flex: 1;
-  margin-right: 65px;
+  margin-right: 3%;
 
   @include tablets {
     margin-right: 0;
@@ -27,6 +28,8 @@
 }
 
 .slider__image-elem {
+  width: 100%;
+
   @include tablets {
     width: rem(420px);
   }
@@ -34,11 +37,11 @@
 
 .slider__content {
   flex: 1;
-  padding-right: rem(30px);
+  // padding-right: rem(30px);
 
-  @include tablets {
-    padding-right: 0;
-  }
+  // @include tablets {
+  //   padding-right: 0;
+  // }
 }
 
 .info-btn {
@@ -51,6 +54,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background: #00accf;
+
+    & .tooltip{
+    display: block;
+    // opacity: 1;
+    }
+  }
 
   @include tablets {
     display: none;
@@ -190,3 +205,51 @@
   height: rem(30px);
 }
 
+
+// TOOLTIP
+
+.tooltip {
+  display: none;
+  // opacity: 0;
+
+  background: #fffffff5;
+  padding: 27px 30px;
+  border-radius: 5px;
+  width: 260px;
+  // border: 1px solid black;
+}
+
+.info-btn__tooltip {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.tooltip__item {
+  display: flex;
+  min-height: 35px;
+  color: #000;
+
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.tooltip__img {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.tooltip__weight {
+  margin-left: 20px;
+  white-space: nowrap;
+  padding: 8px 0;
+}
+
+.tooltip__text {
+  flex-grow: 1;
+  padding: 8px 0;
+  line-height: 21px;
+}

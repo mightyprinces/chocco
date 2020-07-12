@@ -69,14 +69,13 @@ button {
 }
 
 .container {
-  width: 92%;
   max-width: $containerWidth;
-  margin: 0 auto;
-  padding: rem(24px) 0 rem(45px);
+  padding: rem(24px) 2% rem(45px);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   z-index: 1;
 }
 
