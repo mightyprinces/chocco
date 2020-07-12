@@ -326,7 +326,7 @@ button {
 }
 
 .menu__item {
-  margin-right: 1.5rem;
+  margin-right: 1.3333333333rem;
   border-bottom: 0.0555555556rem solid transparent;
   transition: 0.3s;
   margin-bottom: 0.5555555556rem;
