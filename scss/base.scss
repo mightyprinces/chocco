@@ -70,7 +70,7 @@ button {
 
 .container {
   max-width: $containerWidth;
-  padding: rem(24px) 2% rem(45px);
+  padding: rem(24px) rem(30px) rem(45px);
   position: relative;
   display: flex;
   flex-direction: column;

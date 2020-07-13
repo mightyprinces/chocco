@@ -56,14 +56,14 @@
   justify-content: center;
   position: relative;
   cursor: pointer;
-  transition: .3s;
+  transition: .15s;
 
   &:hover {
     background: #00accf;
 
     & .tooltip{
-    display: block;
-    // opacity: 1;
+      pointer-events: all;
+      opacity: 1;
     }
   }
 
@@ -209,8 +209,9 @@
 // TOOLTIP
 
 .tooltip {
-  display: none;
-  // opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s;
+  opacity: 0;
 
   background: #fffffff5;
   padding: 27px 30px;

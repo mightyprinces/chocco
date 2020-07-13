@@ -62,6 +62,8 @@
 
 .reviews__display-inner {
   display: flex;
+  position: relative;
+  z-index: 1;
 
   @include tablets {
     flex-direction: column;
@@ -88,7 +90,7 @@
 
 .reviews__content {
   flex: 1;
-  padding: rem(12px) rem(100px) rem(12px) rem(20px);
+  padding: rem(12px) rem(35px) rem(12px) rem(20px);
   
   @include tablets {
     padding: rem(30px) rem(20px);
@@ -130,4 +132,26 @@
 
 .reviews__switcher-item + .reviews__switcher-item {
   margin-left: rem(5px);
+}
+
+.reviews__list {
+  position: relative;
+  min-height: 260px;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s;
+
+  &.active {
+    position: static;
+    pointer-events: unset;
+    opacity: 1;
+  }
 }

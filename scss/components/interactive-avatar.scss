@@ -7,15 +7,15 @@
   position: relative;
   transition: .3s;
   
-  &:hover {
-    border: rem(6px) solid #cfdeda;
-    background: #cfdeda;
-  }
-
   &--active {
     border: rem(6px) solid $darkGreen;
     background: $darkGreen;
   }
+
+  // &:hover {
+  //   border: rem(6px) solid #cfdeda;
+  //   background: #cfdeda;
+  // }
 }
 
 .interactive-avatar__link {
