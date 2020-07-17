@@ -1148,11 +1148,16 @@ button {
   display: flex;
   position: relative;
 }
+.slider .bx-wrapper {
+  box-shadow: none;
+  background: transparent;
+  border: none;
+}
 
 .slider__item {
   display: flex;
   align-items: center;
-  margin: 0 1.1111111111rem;
+  margin: 0 1.6666666667rem;
 }
 @media screen and (max-width: 768px) {
   .slider__item {
@@ -1176,7 +1181,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .slider__image-elem {
-    width: 23.3333333333rem;
+    max-width: 23.3333333333rem;
   }
 }
 
@@ -1301,53 +1306,23 @@ button {
   white-space: nowrap;
 }
 
-.slider__arrow-wrapper {
-  cursor: pointer;
+.slider__arrow {
   position: absolute;
   top: 50%;
-  padding: 7px;
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow-wrapper {
-    top: 27%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow-wrapper {
-    top: 27%;
-  }
-}
-.slider__arrow-wrapper.arrow-right {
-  right: -1.3888888889rem;
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow-wrapper.arrow-right {
-    right: 15%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .slider__arrow-wrapper.arrow-right {
-    right: 0;
-  }
-}
-.slider__arrow-wrapper.arrow-left {
-  transform: scaleX(-1);
-  left: -1.3888888889rem;
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow-wrapper.arrow-left {
-    left: 15%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .slider__arrow-wrapper.arrow-left {
-    left: 0;
-  }
-}
-
-.slider__arrow {
+  background: url("/img/icons/arrow.svg") center center no-repeat;
+  background-size: contain;
   width: 0.8888888889rem;
   height: 1.6666666667rem;
+  cursor: pointer;
+}
+
+.slider__arrow--prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.slider__arrow--next {
+  right: 0;
 }
 
 .tooltip {
@@ -1392,6 +1367,112 @@ button {
   flex-grow: 1;
   padding: 8px 0;
   line-height: 21px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .team.team--version--desktop {
+    display: none;
+  }
+}
+.team.team--version--mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .team.team--version--mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.team__item {
+  max-width: 12.2222222222rem;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.team__item + .team__item {
+  margin-left: 1.1111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .team__item + .team__item {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.team__member {
+  height: 16rem;
+  margin-bottom: 22px;
+}
+@media screen and (max-width: 768px) {
+  .team__member {
+    margin-bottom: 0.7777777778rem;
+  }
+}
+
+.team__title {
+  font-size: 1.1666666667rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: black;
+  background-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__occ {
+  margin-bottom: 8px;
+  color: black;
+}
+
+.team__member-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__content {
+  overflow: hidden;
+  transition: height 0.2s;
+  height: 0;
+}
+
+.team--version--desktop .team__content {
+  position: absolute;
+  top: 100%;
+}
+
+.triangle__icon {
+  width: 10px;
+  height: 7px;
+  margin-left: 6px;
+}
+
+.team-section {
+  position: relative;
+}
+.team-section::before {
+  content: url(../img/blueberry-and-leaf-right.png);
+  position: absolute;
+  right: 0;
+  top: -35%;
+  width: 10.8888888889rem;
+  height: 25.1666666667rem;
+}
+@media screen and (max-width: 768px) {
+  .team-section::before {
+    width: 8.7222222222rem;
+    height: 20.1111111111rem;
+  }
+}
+
+.active .triangle__icon {
+  transform: scaleY(-1);
 }
 
 /*# sourceMappingURL=main.css.map */

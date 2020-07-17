@@ -5,12 +5,21 @@
 .slider {
   display: flex;
   position: relative;
+
+  .bx-wrapper {
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    // max-width: 94% !important;
+    // margin: 0 auto;
+  }
 }
 
 .slider__item {
   display: flex;
   align-items: center;
-  margin: 0 rem(20px);
+  margin: 0 rem(30px);
+  // padding: 0 rem(10px);
 
   @include tablets {
     flex-direction: column;
@@ -31,7 +40,7 @@
   width: 100%;
 
   @include tablets {
-    width: rem(420px);
+    max-width: rem(420px);
   }
 }
 
@@ -159,50 +168,69 @@
   white-space: nowrap;
 }
 
-.slider__arrow-wrapper {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 7px;
+// .slider__arrow-wrapper {
+//   cursor: pointer;
+//   position: absolute;
+//   top: 50%;
+//   padding: 7px;
 
-  @include tablets {
-    top: 27%;
-  }
+//   @include tablets {
+//     top: 27%;
+//   }
 
-  @include tablets {
-    top: 27%;
-  }
+//   @include tablets {
+//     top: 27%;
+//   }
 
-  &.arrow-right {
-    right: rem(-25px);
+//   &.arrow-right {
+//     right: rem(-25px);
 
-    @include tablets {
-      right: 15%;
-    }
+//     @include tablets {
+//       right: 15%;
+//     }
 
-    @include phones {
-      right: 0;
-    }
-  }
+//     @include phones {
+//       right: 0;
+//     }
+//   }
 
-  &.arrow-left {
-    transform: scaleX(-1);
-    left: rem(-25px);
+//   &.arrow-left {
+//     transform: scaleX(-1);
+//     left: rem(-25px);
 
-    @include tablets {
-      left: 15%;
-    }
+//     @include tablets {
+//       left: 15%;
+//     }
 
-    @include phones {
-      left: 0;
-    }
-  }
-}
+//     @include phones {
+//       left: 0;
+//     }
+//   }
+// }
 
+
+// .slider__arrow {
+//   width: rem(16px);
+//   height: rem(30px);
+// }
 
 .slider__arrow {
+  position: absolute;
+  top: 50%;
+  background: url('/img/icons/arrow.svg') center center no-repeat;
+  background-size: contain;
   width: rem(16px);
   height: rem(30px);
+  // display: block;
+  cursor: pointer;
+}
+
+.slider__arrow--prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+.slider__arrow--next {
+  right: 0;
 }
 
 

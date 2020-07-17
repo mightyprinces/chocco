@@ -1,0 +1,109 @@
+.team {
+  display: flex;
+  justify-content: space-between;
+
+  &.team--version--desktop {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &.team--version--mobile {
+    display: none;
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.team__item {
+  max-width: rem(220px);
+  text-align: center;
+  flex: 1;
+  position: relative;
+
+  & + & {
+    margin-left: rem(20px);
+
+    @include tablets {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}
+
+.team__member {
+  // width: rem(220px);
+  height: rem(288px);
+  margin-bottom: 22px;
+
+  @include tablets {
+    margin-bottom: rem(14px);
+  }
+}
+
+.team__title {
+  font-size: rem(21px);
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: black;
+  background-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__occ {
+  margin-bottom: 8px;
+  color: black;
+}
+
+.team__member-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__content {
+  overflow: hidden;
+  transition: height .2s;
+  height: 0;
+}
+
+.team--version--desktop
+.team__content {
+  position: absolute;
+  top: 100%;
+}
+
+.triangle__icon {
+  width: 10px;
+  height: 7px;
+  // line-height: ;
+  margin-left: 6px;
+}
+
+.team-section {
+  position: relative;
+
+  &::before {
+    content: url(../img/blueberry-and-leaf-right.png);
+    position: absolute;
+    right: 0;
+    top: -35%;
+    width: rem(196px);
+    height: rem(453px);
+
+    @include tablets {
+      // right: -10px;
+      width: rem(157px);
+      height: rem(362px);
+    }
+  }
+}
+
+.active .triangle__icon {
+  transform: scaleY(-1);
+}
