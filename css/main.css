@@ -1309,7 +1309,7 @@ button {
 .slider__arrow {
   position: absolute;
   top: 50%;
-  background: url("/img/icons/arrow.svg") center center no-repeat;
+  background: url("../img/icons/arrow.svg") center center no-repeat;
   background-size: contain;
   width: 0.8888888889rem;
   height: 1.6666666667rem;
